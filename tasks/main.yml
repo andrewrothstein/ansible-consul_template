@@ -1,0 +1,31 @@
+---
+- name: download zip
+  get_url: >-
+    url={{consul_template_zip_url}}
+    dest=/tmp/{{consul_template_zip}}
+    owner=root
+    group=root
+    mode=0644
+
+- name: mkdir /usr/local/bin/consul-template-{{consul_template_ver}}
+  file: >-
+    path={{consul_template_install_dir}}
+    state=directory
+    owner=root
+    group=root
+    mode=0755
+
+- name: unarchive...
+  unarchive: >-
+    copy=no
+    src=/tmp/{{consul_template_zip}}
+    dest={{consul_template_install_dir}}
+    creates={{consul_template_install_dir}}/consul-template
+
+- name: link /usr/local/bin/consul-template
+  file: >-
+    src={{consul_template_install_dir}}/consul-template
+    dest={{consul_template_install_bin_dir}}/consul-template
+    state=link
+
+    

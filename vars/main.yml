@@ -1,0 +1,4 @@
+---
+consul_template_zip : 'consul-template_{{consul_template_ver}}_{{consul_template_platform}}.zip'
+consul_template_zip_url : '{{consul_template_mirror}}/{{consul_template_ver}}/{{consul_template_zip}}'
+consul_template_install_dir : '{{consul_template_install_bin_dir}}/consul-template-{{consul_template_ver}}'
