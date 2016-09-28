@@ -20,5 +20,6 @@ galaxy_info:
     - development
 
 dependencies:
-  - andrewrothstein.unarchive-deps
+  - role: andrewrothstein.unarchive-deps
+    version: v1.0.3
   
