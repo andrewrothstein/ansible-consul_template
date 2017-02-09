@@ -1,35 +1,35 @@
 ---
 - name: download zip
-  become: yes
+  become: '{{consul_template_privilege_escalate}}'
   become_user: root
-  get_url: >-
-    url={{consul_template_zip_url}}
-    dest=/tmp/{{consul_template_zip}}
-    mode=0644
+  get_url:
+    url: '{{consul_template_zip_url}}'
+    dest: /tmp/{{consul_template_zip}}
+    mode: '0644'
 
 - name: make install directory
-  become: yes
+  become: '{{consul_template_privilege_escalate}}'
   become_user: root
-  file: >-
-    path={{consul_template_install_dir}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{consul_template_install_dir}}'
+    state: directory
+    mode: '0755'
 
 - name: unarchive...
-  become: yes
+  become: '{{consul_template_privilege_escalate}}'
   become_user: root
-  unarchive: >-
-    copy=no
-    src=/tmp/{{consul_template_zip}}
-    dest={{consul_template_install_dir}}
-    creates={{consul_template_install_dir}}/consul-template
+  unarchive:
+    copy: no
+    src: /tmp/{{consul_template_zip}}
+    dest: '{{consul_template_install_dir}}'
+    creates: '{{consul_template_install_dir}}/consul-template'
 
 - name: link /usr/local/bin/consul-template
-  become: yes
+  become: '{{consul_template_privilege_escalate}}'
   become_user: root
-  file: >-
-    src={{consul_template_install_dir}}/consul-template
-    dest={{consul_template_install_bin_dir}}/consul-template
-    state=link
+  file:
+    src: '{{consul_template_install_dir}}/consul-template'
+    dest: '{{consul_template_install_bin_dir}}/consul-template'
+    state: link
 
     

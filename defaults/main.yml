@@ -1,5 +1,24 @@
 ---
 consul_template_mirror : https://releases.hashicorp.com/consul-template
-consul_template_ver : '0.16.0'
+consul_template_ver : '0.18.1'
 consul_template_platform : linux_amd64
+consul_template_privilege_escalate: True
 consul_template_install_bin_dir : /usr/local/bin
+consul_template_checksums:
+  darwin_386: sha256:885888df42b56e7a03fed6b517954609f76cd67a543b724f93dd500ddbe26522
+  darwin_amd64: sha256:b1cadf8ddf8cdd5d7719b5e55a4672de9806278b4ec4d33b342f8910455b32c9
+  freebsd_386: sha256:e62abad097e535b1fe78aad29588135f830f5379a1861feb316eecdd9cd98e74
+  freebsd_amd64: sha256:c4e7c4edad9621fd65595808456384bb294d2c08ee099227c05463d7e8fbd896
+  freebsd_arm: sha256:870250e0c7c2e265326a353010a97cdf6424e962120841c3ddce4fd01c5d7975
+  linux_386: sha256:abd54aef42904c00e110c1f256f1f12470aac9fcd679a49f624bc9b118a9dddc
+  linux_amd64: sha256:72eb9ee8d06f5f02daf4ab5402fdeb466c1f714021a66f28b6e8ec9ff074b7d5
+  linux_arm: sha256:e8029b0892e1cf72bee4b64d669391a8f35ac338e51c09644d4bcff1d50d486f
+  netbsd_386: sha256:a7679ebbbbb8497e5aadd3caae2fd523c09d0715187114460df58445f109fad6
+  netbsd_amd64: sha256:3ba46bbe1a692206bac6b1fc09c161371513fffe2dbb89b5b1ed2ab991ffc76f
+  netbsd_arm: sha256:9aaf34c958c874dfc383ec5c3a9569044a398487de1d7e4b13f03bda094c8508
+  openbsd_386: sha256:52ff1b968d45677941211b92cacf0f81a13649ec4bd702c61418df688fe870ed
+  openbsd_amd64: sha256:2312fb48733645e7295d9b79549000458158ed19eadb4eeb5ec9673101543fb8
+  openbsd_arm: sha256:e41d491923ab3dc19e52048dc41a642252e91b1d85d9f3ba998ae548e2788284
+  solaris_amd64: sha256:f3e924d2a1a653e5d66d8348fd9209c659af8a741369d00d41fdbc1854b23e01
+  windows_386: sha256:137b9947791b37db06551bce3178c227ddb9de6cef42b30f89fadeaa49c69a7a
+  windows_amd64: sha256:20913cb69e7ef1b6c64ae1de4a9e98d8bea95aade400d7d423852bd35205c485
