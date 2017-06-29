@@ -4,6 +4,7 @@ consul_template_ver : '0.19.0'
 consul_template_platform : linux_amd64
 consul_template_privilege_escalate: True
 consul_template_install_bin_dir : /usr/local/bin
+consul_template_cleanup: False
 
 # https://releases.hashicorp.com/consul-template/0.19.0/consul-template_0.19.0_SHA256SUMS | grep zip
 consul_template_checksums:

@@ -31,3 +31,11 @@
     src: '{{consul_template_install_dir}}/consul-template'
     dest: '{{consul_template_install_bin_dir}}/consul-template'
     state: link
+
+- name: cleanup...
+  become: '{{consul_template_privilege_escalate}}'
+  become_user: root
+  when: consul_template_cleanup
+  file:
+    path: /tmp/{{consul_template_zip}}
+    state: absent
