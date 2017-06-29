@@ -31,5 +31,3 @@
     src: '{{consul_template_install_dir}}/consul-template'
     dest: '{{consul_template_install_bin_dir}}/consul-template'
     state: link
-
-    
