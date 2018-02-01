@@ -1,29 +1,43 @@
 ---
-- name: download zip
-  become: '{{consul_template_privilege_escalate}}'
-  become_user: root
-  get_url:
-    url: '{{consul_template_zip_url}}'
-    dest: /tmp/{{consul_template_zip}}
-    mode: '0644'
-
-- name: make install directory
-  become: '{{consul_template_privilege_escalate}}'
-  become_user: root
-  file:
+- name: check for install...
+  become: yes
+  stat:
     path: '{{consul_template_install_dir}}'
-    state: directory
-    mode: '0755'
+  changed_when: False
+  register: consul_template_binary
+- when: not consul_template_binary.stat.exists
+  block:
+    - name: download zip
+      become: '{{consul_template_privilege_escalate}}'
+      become_user: root
+      get_url:
+        url: '{{consul_template_zip_url}}'
+        dest: /tmp/{{consul_template_zip}}
+        mode: 0644
 
-- name: unarchive...
-  become: '{{consul_template_privilege_escalate}}'
-  become_user: root
-  unarchive:
-    remote_src: yes
-    src: /tmp/{{consul_template_zip}}
-    dest: '{{consul_template_install_dir}}'
-    creates: '{{consul_template_install_dir}}/consul-template'
+    - name: make install directory
+      become: '{{consul_template_privilege_escalate}}'
+      become_user: root
+      file:
+        path: '{{consul_template_install_dir}}'
+        state: directory
+        mode: 0755
 
+    - name: unarchive...
+      become: '{{consul_template_privilege_escalate}}'
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{consul_template_zip}}
+        dest: '{{consul_template_install_dir}}'
+        creates: '{{consul_template_install_dir}}/consul-template'
+  always:
+    - name: cleanup
+      become: '{{consul_template_privilege_escalate}}'
+      become_user: root
+      file:
+        path: /tmp/{{consul_template_zip}}
+        state: absent
 - name: link /usr/local/bin/consul-template
   become: '{{consul_template_privilege_escalate}}'
   become_user: root
@@ -31,11 +45,3 @@
     src: '{{consul_template_install_dir}}/consul-template'
     dest: '{{consul_template_install_bin_dir}}/consul-template'
     state: link
-
-- name: cleanup...
-  become: '{{consul_template_privilege_escalate}}'
-  become_user: root
-  when: consul_template_cleanup
-  file:
-    path: /tmp/{{consul_template_zip}}
-    state: absent

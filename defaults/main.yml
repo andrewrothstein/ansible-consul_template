@@ -1,27 +1,46 @@
 ---
 consul_template_mirror : https://releases.hashicorp.com/consul-template
-consul_template_ver : '0.19.0'
+consul_template_ver : '0.19.4'
 consul_template_platform : linux_amd64
 consul_template_privilege_escalate: True
 consul_template_install_bin_dir : /usr/local/bin
-consul_template_cleanup: False
 
-# https://releases.hashicorp.com/consul-template/0.19.0/consul-template_0.19.0_SHA256SUMS | grep zip
 consul_template_checksums:
-  darwin_386: sha256:88a1aa69cfc09cbb00ae78d0bdadb0d64d8eee12cf2f2ecca8ef290508796e4f
-  darwin_amd64: sha256:b968741c4f5652a5ca85535885a2982bbfc8a7a8981a6add7144ceaa758bbb0b
-  freebsd_386: sha256:475aa76b2068ef3b15e7ce7b0418d834b458e661711ef915297a40e5665b26cb
-  freebsd_amd64: sha256:2fcde287b375c542d2b0abdca273c0edfab90ca6c0015396f3bd44fdf2c55672
-  freebsd_arm: sha256:aeabed427f4b37fdc77822f0d5176d4e80d9ea0a66ad8e4dd04265a7721bb06a
-  linux_386: sha256:7622079b3514ebe3ca8791e6e44ffed9aaa94562a32bbb65d1a517bc360bafe8
-  linux_amd64: sha256:31dda6ebc7bd7712598c6ac0337ce8fd8c533229887bd58e825757af879c5f9f
-  linux_arm: sha256:45400256ccf5773bb4ca6c4784bf9a055d9408cd463ebc2a68841635d8eaaa61
-  netbsd_386: sha256:5b98dc12ff9c3a81285dd18ab473b79144d218bcb18fd8dcaac8d03fd46a4e97
-  netbsd_amd64: sha256:f9606a3efc0652e34bcebfcb1d3e1945659f45cc33370ac07fd4d373275ae61c
-  netbsd_arm: sha256:3901b4728be7b1151c10f21f8eb0022da917861f338857f3b9112ff149dc7ce3
-  openbsd_386: sha256:f7a31c93cc16520b7273f29e8e888bd18dfceec37feeb536e04a28ea52c48bb0
-  openbsd_amd64: sha256:ef9b4fd41fb64d25bcf8bfcc9dc4da0df1f8465a598416812c2d43d82b12957f
-  openbsd_arm: sha256:d3998937ee565805f059d63e04c2cbe19386527ff90428789df37fd52234bbfd
-  solaris_amd64: sha256:08d2ef1d28e727bb99d1c7d95133bda1c343f020fb87b553119b145dc303ec5a
-  windows_386: sha256:1d14eab767b9b9424b2a05590fb138dbf5e0fe84d863d6d7586a504a03a18350
-  windows_amd64: sha256:545023d90773b6de686558f790d07ccd052b9d5517cb2daeadfaf6b0cc09aea3
+  # https://releases.hashicorp.com/consul-template/0.19.4/consul-template_0.19.4_SHA256SUMS | grep zip
+  '0.19.4':
+    darwin_386: sha256:388885014394610efe71dfc5ba2a2981ec7f32bc5c5c7bdacb97a7bcd132a728
+    darwin_amd64: sha256:d492076203040307d558964f7f7448b8c2d69b4a3a126df5ae24e0482a3f169c
+    freebsd_386: sha256:0177d1415b9d91cbf30c73b888ba04b0f0093aedf33887bab551e22f994c994b
+    freebsd_amd64: sha256:c2ee23cc8ee2ca7fd14bd4bee67328a990fd03094d3957fc49bf8f3e5db4dfdf
+    freebsd_arm: sha256:5ca15b0f2ef449b949bc900f246e68750207b5bd0ca24127c75aeacba05e00a5
+    linux_386: sha256:0aff4ce56ee369aa6192a305dd0b0c214fa4761488291cf0160cba7280966bd3
+    linux_amd64: sha256:5f70a7fb626ea8c332487c491924e0a2d594637de709e5b430ecffc83088abc0
+    linux_arm: sha256:fb9aa99abc9d5075941037e92dabc58902e15407afae8b0f20836955306093ec
+    netbsd_386: sha256:bd4c00aaf661eaccb2a1637215e4ddce7018058d500d7502cffd0793716d8754
+    netbsd_amd64: sha256:e3d7f05f713d451e3cb04650462475135a5821131888e38dfe7524d60bbd32d0
+    netbsd_arm: sha256:916feb5c7731c11e874fd8f639e19f666bf0092fb0dcfd58b61bc8593ef312f4
+    openbsd_386: sha256:4eb86705f43cb1303e93c57816545eede2f07a1d7f11d83eba07e5a373fbddeb
+    openbsd_amd64: sha256:c0991739cca724ea098a4c778006ae2c96a0b43b8a8afa5d95a4b4ff99555d2b
+    openbsd_arm: sha256:df2cab06001418778684c7a857ff19dbf87967732cebceccca5d8875e918acf9
+    solaris_amd64: sha256:2b3fd1e5f74164ddc891d5697fc0e0972f78a5585f1a3b8a56831b72e815fe93
+    windows_386: sha256:ccbaa19a8dff77c197dbcec44b1636a2ed9994f3c2b5bca109dee49613eb92e6
+    windows_amd64: sha256:5c88df6a8cb00cc2cbef82c756c4c6965613a7c37eea3ab2a7a2110b64cf114e
+  # https://releases.hashicorp.com/consul-template/0.19.0/consul-template_0.19.0_SHA256SUMS | grep zip
+  '0.19.0':
+    darwin_386: sha256:88a1aa69cfc09cbb00ae78d0bdadb0d64d8eee12cf2f2ecca8ef290508796e4f
+    darwin_amd64: sha256:b968741c4f5652a5ca85535885a2982bbfc8a7a8981a6add7144ceaa758bbb0b
+    freebsd_386: sha256:475aa76b2068ef3b15e7ce7b0418d834b458e661711ef915297a40e5665b26cb
+    freebsd_amd64: sha256:2fcde287b375c542d2b0abdca273c0edfab90ca6c0015396f3bd44fdf2c55672
+    freebsd_arm: sha256:aeabed427f4b37fdc77822f0d5176d4e80d9ea0a66ad8e4dd04265a7721bb06a
+    linux_386: sha256:7622079b3514ebe3ca8791e6e44ffed9aaa94562a32bbb65d1a517bc360bafe8
+    linux_amd64: sha256:31dda6ebc7bd7712598c6ac0337ce8fd8c533229887bd58e825757af879c5f9f
+    linux_arm: sha256:45400256ccf5773bb4ca6c4784bf9a055d9408cd463ebc2a68841635d8eaaa61
+    netbsd_386: sha256:5b98dc12ff9c3a81285dd18ab473b79144d218bcb18fd8dcaac8d03fd46a4e97
+    netbsd_amd64: sha256:f9606a3efc0652e34bcebfcb1d3e1945659f45cc33370ac07fd4d373275ae61c
+    netbsd_arm: sha256:3901b4728be7b1151c10f21f8eb0022da917861f338857f3b9112ff149dc7ce3
+    openbsd_386: sha256:f7a31c93cc16520b7273f29e8e888bd18dfceec37feeb536e04a28ea52c48bb0
+    openbsd_amd64: sha256:ef9b4fd41fb64d25bcf8bfcc9dc4da0df1f8465a598416812c2d43d82b12957f
+    openbsd_arm: sha256:d3998937ee565805f059d63e04c2cbe19386527ff90428789df37fd52234bbfd
+    solaris_amd64: sha256:08d2ef1d28e727bb99d1c7d95133bda1c343f020fb87b553119b145dc303ec5a
+    windows_386: sha256:1d14eab767b9b9424b2a05590fb138dbf5e0fe84d863d6d7586a504a03a18350
+    windows_amd64: sha256:545023d90773b6de686558f790d07ccd052b9d5517cb2daeadfaf6b0cc09aea3
