@@ -6,6 +6,25 @@ consul_template_privilege_escalate: True
 consul_template_install_bin_dir : /usr/local/bin
 
 consul_template_checksums:
+  # curl -s https://releases.hashicorp.com/consul-template/0.19.5/consul-template_0.19.5_SHA256SUMS | grep zip | sed 's/consul-template_0.19.5_//' | sed 's/.zip/:/' | awk '{print $2, "sha256:"$1}'
+  '0.19.5.':
+    darwin_386: sha256:4a74fa30e7de279186f7d9f0f0a814a89efd1862ec50197ae9f700644146530b
+    darwin_amd64: sha256:792d584f12fb559ec14f94c16ff7d5c791b0918d4a553da52642cb10f2c07226
+    freebsd_386: sha256:da6e3d3121635673c38d42833318ec0c9e5cc3986d4622cfdf3633d789fc700c
+    freebsd_amd64: sha256:1c6256d434a5bf41753e9016b4708e03db1b2f977ef76bff426693b8435ee943
+    freebsd_arm: sha256:647f3531e9b7c9ae544a7fced7698faa132a7179ddeca56136f7ba50577e2d73
+    linux_386: sha256:091c53d3a624494ad7ab9df9417f126ed9da10ff2aa4f6c26d5b96c2443ec8c0
+    linux_amd64: sha256:e6b376701708b901b0548490e296739aedd1c19423c386eb0b01cfad152162af
+    linux_arm: sha256:8cbd985534aa30ee0ac41357109de91b2a90bf610c3938e7e3e918d16edf8954
+    netbsd_386: sha256:7b19661f96ba09b7573ad1f24618a49ab94081d1b269995e6c5c2712dd49bfab
+    netbsd_amd64: sha256:8a0cabc3d9983972ba45a6a42cb497ca8c98ad7698afe611e95ea2876c0a3888
+    netbsd_arm: sha256:d84214f16ab73e5e4d26b82d6b95fd8b17c8006193f297ecc8eba2f6e8c24409
+    openbsd_386: sha256:9e8400c6b652cbdeb268c611dcf380c8fd42efe6dd7975ae299cbff2064f722e
+    openbsd_amd64: sha256:61772c94bb7ac0420a6a7314131f4407af4059d3e91668c75370bed193602a22
+    openbsd_arm: sha256:68909f5224bd2edb2316ec5563df51e8bc2c3ad95dda19ae4093e8e2d25e059a
+    solaris_amd64: sha256:48e41def69a9b1dd730165a4a8b9b1c40065d2d47f40a2a8c04189f876502866
+    windows_386: sha256:3cc12722d46931a2f482e55239e93be155d9ab0eff306c2d9ff8ab042a212b54
+    windows_amd64: sha256:01a2d2979623efb95067251b569cc2020b36fbfafdca0e9cd6b4fb7f14805712
   # https://releases.hashicorp.com/consul-template/0.19.4/consul-template_0.19.4_SHA256SUMS | grep zip
   '0.19.4':
     darwin_386: sha256:388885014394610efe71dfc5ba2a2981ec7f32bc5c5c7bdacb97a7bcd132a728
