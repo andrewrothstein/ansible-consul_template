@@ -1,4 +1,5 @@
 ---
+consul_template_platform: '{{ consul_template_os }}_{{ consul_template_arch }}'
 consul_template_name: consul-template_{{ consul_template_ver }}_{{ consul_template_platform }}
 consul_template_zip: '{{ consul_template_name }}.zip'
 consul_template_zip_url: '{{ consul_template_mirror }}/{{ consul_template_ver }}/{{ consul_template_zip }}'
