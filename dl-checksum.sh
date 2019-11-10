@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 APP=consul-template
-VER=${1:-0.21.0}
+VER=${1:-0.22.1}
 DIR=~/Downloads
 MIRROR=https://releases.hashicorp.com/${APP}/${VER}
 
@@ -32,16 +32,13 @@ dl darwin 386
 dl darwin amd64
 dl freebsd 386
 dl freebsd amd64
-dl freebsd arm
 dl linux 386
 dl linux amd64
 dl linux arm
 dl netbsd 386
 dl netbsd amd64
-dl netbsd arm
 dl openbsd 386
 dl openbsd amd64
-dl openbsd arm
 dl solaris amd64
 dl windows 386
 dl windows amd64
