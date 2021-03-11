@@ -1,4 +1,10 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
+    - role: '{{ playbook_dir }}'
+  tasks:
+    - command: /usr/local/bin/consul-template --version
+      register: consul_template_test_output
+    - name: consul-template --version
+      debug:
+        msg: '{{ consul_template_test_output.stderr }}'

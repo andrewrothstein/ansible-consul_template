@@ -1,5 +1,5 @@
 ---
-- name: check for install...
+- name: check for install in {{ consul_template_install_dir }}
   become: yes
   stat:
     path: '{{ consul_template_install_dir }}'
@@ -7,15 +7,15 @@
   register: consul_template_binary
 - when: not consul_template_binary.stat.exists
   block:
-    - name: download zip
+    - name: downloading {{ consul_template_zip_url }}
       become: '{{ consul_template_privilege_escalate }}'
       become_user: root
       get_url:
         url: '{{ consul_template_zip_url }}'
-        dest: /tmp/{{ consul_template_zip }}
+        dest: '{{ consul_template_tmp_zip }}'
         mode: 0644
 
-    - name: make install directory
+    - name: mkdir {{ consul_template_install_dir }}
       become: '{{ consul_template_privilege_escalate }}'
       become_user: root
       file:
@@ -23,25 +23,25 @@
         state: directory
         mode: 0755
 
-    - name: unarchive...
+    - name: unarchive {{ consul_template_tmp_zip }}
       become: '{{ consul_template_privilege_escalate }}'
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ consul_template_zip }}
+        src: '{{ consul_template_tmp_zip }}'
         dest: '{{ consul_template_install_dir }}'
         creates: '{{ consul_template_install_dir }}/consul-template'
   always:
-    - name: cleanup
+    - name: rm {{ consul_template_tmp_zip }}
       become: '{{ consul_template_privilege_escalate }}'
       become_user: root
       file:
-        path: /tmp/{{ consul_template_zip }}
+        path: '{{ consul_template_tmp_zip }}'
         state: absent
-- name: link /usr/local/bin/consul-template
+- name: linking {{ consul_template_link }} to {{ consul_template_exe }}
   become: '{{ consul_template_privilege_escalate }}'
   become_user: root
   file:
-    src: '{{ consul_template_install_dir }}/consul-template'
-    dest: '{{ consul_template_install_bin_dir }}/consul-template'
+    src: '{{ consul_template_exe }}'
+    dest: '{{ consul_template_link }}'
     state: link
