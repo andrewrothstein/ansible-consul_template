@@ -7,4 +7,4 @@
       register: consul_template_test_output
     - name: consul-template --version
       debug:
-        msg: '{{ consul_template_test_output.stderr }}'
+        msg: '{{ consul_template_test_output.stdout }}'
