@@ -1,6 +1,6 @@
 andrewrothstein.consul-template
 ===========================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-consul-template.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-consul-template)
+![Build Status](https://github.com/andrewrothstein/ansible-consul-template/actions/workflows/build.yml/badge.svg)
 
 Installs [consul-template](https://github.com/hashicorp/consul-template)
 
