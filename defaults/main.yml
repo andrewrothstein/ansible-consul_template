@@ -1,6 +1,6 @@
 ---
 consul_template_mirror: https://releases.hashicorp.com/consul-template
-consul_template_ver: 0.28.0
+consul_template_ver: 0.29.0
 consul_template_os: linux
 consul_template_arch: amd64
 consul_template_privilege_escalate: True
@@ -441,3 +441,21 @@ consul_template_checksums:
     windows_386: sha256:fab92b6b84e8593b27ff9428615bd17769dbf861e2c6a58461c91e3d1b4f7196
     # https://releases.hashicorp.com/consul-template/0.28.0/consul-template_0.28.0_windows_amd64.zip
     windows_amd64: sha256:93e79a0cb9ba92bca28bfb0dfdb0a2129f15d00632c6dc67c3743ce85aec5dc5
+  # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_SHA256SUMS
+  '0.29.0':
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_darwin_amd64.zip
+    darwin_amd64: sha256:c7110580be052789e8955061de56bf616bdba612ad9ca400fca450912f08fd9d
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_freebsd_386.zip
+    freebsd_386: sha256:04b38193e97a3895151118c689b11980a23ddc6857806b70221047d9fbf0324a
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_freebsd_amd64.zip
+    freebsd_amd64: sha256:bc0bbedcf610c4ffc6be5e0708cdbceddcc7b8e535dfa26c8f1142ead8c490f9
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_linux_386.zip
+    linux_386: sha256:e8812e977da1da2b2e67fb04e959d0f4a251e3b18d1f25f77e5593058b38c19c
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_linux_amd64.zip
+    linux_amd64: sha256:9178437bde1f0f220010f17806c01b36ccb3814f065d4ebdfba53ade9832012d
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_solaris_amd64.zip
+    solaris_amd64: sha256:b1c14ff62008bad3c60e8914e8a9ae92540a4921e85073590d033ca456e2eef5
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_windows_386.zip
+    windows_386: sha256:a55d042f5b9c51c2cc3a5fcd9bce92218a04029a893be3bc9c73bb81f58ee96d
+    # https://releases.hashicorp.com/consul-template/0.29.0/consul-template_0.29.0_windows_amd64.zip
+    windows_amd64: sha256:cc6d00e3a4a121550900db7a54cff217a317d54fae4341eb812431f4e058af1b
