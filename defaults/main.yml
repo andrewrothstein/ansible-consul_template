@@ -1,6 +1,6 @@
 ---
 consul_template_mirror: https://releases.hashicorp.com/consul-template
-consul_template_ver: 0.29.1
+consul_template_ver: 0.29.6
 consul_template_os: linux
 consul_template_arch: amd64
 consul_template_privilege_escalate: True
@@ -477,3 +477,93 @@ consul_template_checksums:
     windows_386: sha256:95f4d41d74e054babde903c4fe5d613a66203434106c87be0e0ec9a554dc8414
     # https://releases.hashicorp.com/consul-template/0.29.1/consul-template_0.29.1_windows_amd64.zip
     windows_amd64: sha256:53cc74e0beb91813312f52c99bb59d693499c531ea47f4274248a9813b60b6c1
+  # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_SHA256SUMS
+  '0.29.2':
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_darwin_amd64.zip
+    darwin_amd64: sha256:cdfea794b7a36232af9fd55ebf50874cbccc85194c66bdf210c411e734642baf
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_freebsd_386.zip
+    freebsd_386: sha256:201ff352d9e198ca378b1ca26f62be1d90fb9a99e608f9446aa6146921847dbb
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_freebsd_amd64.zip
+    freebsd_amd64: sha256:22c09444ca640306e401ed1b1726c1cc8bd846340c911639578128a1fbb2d451
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_linux_386.zip
+    linux_386: sha256:f9846a385f41f11d99486002b535a065929476e86b6cc622fd9c51d9cb251f55
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_linux_amd64.zip
+    linux_amd64: sha256:88d57a227967da2f7c14f702245adcf30d80ec59354ed43c8778eb7296c9d4db
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_solaris_amd64.zip
+    solaris_amd64: sha256:cb940f1c18c520e431f24c6397bc9c47982285ddfdd9e64a6c8039bb9708900a
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_windows_386.zip
+    windows_386: sha256:a22c3c3fc9a5e1104e5445a6e3e0e9d9bba7b518e19011b6c4fc7fa81919d023
+    # https://releases.hashicorp.com/consul-template/0.29.2/consul-template_0.29.2_windows_amd64.zip
+    windows_amd64: sha256:d586866a6964289489a31f99616b3de9eeddd181ac89a8f44a497b7af2ea4852
+  # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_SHA256SUMS
+  '0.29.3':
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_darwin_amd64.zip
+    darwin_amd64: sha256:253bdc57b9c7fef6ba391e2181c972e1a6abcddb42c675fc2d7baa8e5287c1fe
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_freebsd_386.zip
+    freebsd_386: sha256:f009478ed7a237737443ad768bacb6805782cf568b6ee6268a9de72ad2271b7b
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_freebsd_amd64.zip
+    freebsd_amd64: sha256:afa9ee1fe5e377547192c1c1f8e9b60490bf09c2cea61f250a360dd689845e2c
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_linux_386.zip
+    linux_386: sha256:e0cdb9449a0744c13db356ef149756cbe03635871528129dea1595d7b05e7993
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_linux_amd64.zip
+    linux_amd64: sha256:cb6d2f2630ae3950129dff7ff39b1bd27de6e7a04817ecfb6163e00c45f93e0c
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_solaris_amd64.zip
+    solaris_amd64: sha256:a2e9cb70eb6ce2b1897c8abb684f815622660ac064b2fd048e11aa3f2d3cff6a
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_windows_386.zip
+    windows_386: sha256:e912babbeb23e634fa5e20b85b1ee86e20cd24c83ac61a72998f95cdaeb2500c
+    # https://releases.hashicorp.com/consul-template/0.29.3/consul-template_0.29.3_windows_amd64.zip
+    windows_amd64: sha256:5fca680da3ee8bb0f752f6dbecf75cdd6af4467070b1765b852c6adaaf42d1eb
+  # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_SHA256SUMS
+  '0.29.4':
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_darwin_amd64.zip
+    darwin_amd64: sha256:6daa027962f7dd8076e75abef88354810991a488a364bf10dd2bed2e46dbb1a2
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_freebsd_386.zip
+    freebsd_386: sha256:b26435f57b233442cc58c920fcb62fe22c6188a09254d3ec8193a1d5ee9496af
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_freebsd_amd64.zip
+    freebsd_amd64: sha256:aefe0482db7696aff5b3566e621b8855ae7d1156b798dc1aac6e70e93a965153
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_linux_386.zip
+    linux_386: sha256:95f2d5e378d7b1772f1f15e826b726bd062c058c195d2d2f210845504e301137
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_linux_amd64.zip
+    linux_amd64: sha256:7e27ad0a0642fe869097d5c516304889f51e5e52f53f5b5d8d2d0a601feef8d5
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_solaris_amd64.zip
+    solaris_amd64: sha256:7edc6e13fab5798a73c09abb9e706c8405c24df0c74407c4b4a91fb81a87605d
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_windows_386.zip
+    windows_386: sha256:27d1817f5a6f720ccbfa29956e1fa0b2c39c350869f099823ff14edf62998c68
+    # https://releases.hashicorp.com/consul-template/0.29.4/consul-template_0.29.4_windows_amd64.zip
+    windows_amd64: sha256:88c27d90eb492a7a5e082651eeb8a9e51e7b07bc1599f5804a03b69c8b441f56
+  # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_SHA256SUMS
+  '0.29.5':
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_darwin_amd64.zip
+    darwin_amd64: sha256:197df970ed04f20e8f96eb1d9eb0257552e6bb8b81d819286e01686deb207c68
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_freebsd_386.zip
+    freebsd_386: sha256:8ee5d936a21d34b249ab353847780157fb9ac52a5c0d2302ffa164fa3815a0e9
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_freebsd_amd64.zip
+    freebsd_amd64: sha256:10d473c1ac7f4d990df3b9d03196cf7125c273732888e284e1fd66c3777967b1
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_linux_386.zip
+    linux_386: sha256:a72880bc4e084550ddf45f0181a82c4ee44673b8fee6d68e780a47447b4ee9de
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_linux_amd64.zip
+    linux_amd64: sha256:24aa8c67a2ac95c03524d62dd0e1815359e8c9689324b48e9c75ed2b6e25a5c8
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_solaris_amd64.zip
+    solaris_amd64: sha256:6be829d7050da30162b08d184f1e8f36aed12246482723a41dd09ee52e701e4a
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_windows_386.zip
+    windows_386: sha256:5b96100d22de61ae006068274db57ccbcd119bfd6d5c18840cd39eb6e6acf849
+    # https://releases.hashicorp.com/consul-template/0.29.5/consul-template_0.29.5_windows_amd64.zip
+    windows_amd64: sha256:6ac712b7f853f1bb5aa95efee2a69121f8b3395e6330b8aec1d57af44029de1c
+  # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_SHA256SUMS
+  '0.29.6':
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_darwin_amd64.zip
+    darwin_amd64: sha256:28168e6dd107df2f75a38356340330becd0eba0d59ce2bfd4b6aa436b15c1ab8
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_freebsd_386.zip
+    freebsd_386: sha256:54097211fe1191faa982439fd6f14b2f5399749a92c0fb8f0861fa49a7435a52
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_freebsd_amd64.zip
+    freebsd_amd64: sha256:dc33fda9faf65544ec2f4acbba1416252f760334ecf26ac575afa67b4df99a0f
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_linux_386.zip
+    linux_386: sha256:f580605a4ee05a14c147524eca11ebb9303f01f35f4553b7db79a36bfcd3efaa
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_linux_amd64.zip
+    linux_amd64: sha256:0e653b76f8eb7712687fc407c4ae62206304d01c9d76d4c4d2e51d41570c8ac1
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_solaris_amd64.zip
+    solaris_amd64: sha256:079c16af863f453c0219a4ab9f27f3eb20884bac15a6cc0ac4b0b75da17ae325
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_windows_386.zip
+    windows_386: sha256:009b6267f402a90d922c456f1b520e1d62f1e98451f23451e0333b7b4e822986
+    # https://releases.hashicorp.com/consul-template/0.29.6/consul-template_0.29.6_windows_amd64.zip
+    windows_amd64: sha256:53fe19e57f3529850cd9f47e000da91f2de3c5fe1eeb640a1a2beaf15ef31087

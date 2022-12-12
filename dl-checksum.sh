@@ -41,4 +41,4 @@ dl_ver() {
     dl $ver $lchecksums windows amd64
 }
 
-dl_ver ${1:-0.29.1}
+dl_ver ${1:-0.29.6}

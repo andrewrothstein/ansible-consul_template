@@ -1,6 +1,8 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: check for install in {{ consul_template_install_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ consul_template_install_dir }}'
   changed_when: False
@@ -27,7 +29,7 @@
       become: '{{ consul_template_privilege_escalate }}'
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ consul_template_tmp_zip }}'
         dest: '{{ consul_template_install_dir }}'
         creates: '{{ consul_template_install_dir }}/consul-template'
