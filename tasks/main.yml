@@ -1,49 +1,9 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchive-deps
-- name: check for install in {{ consul_template_install_dir }}
-  become: true
-  stat:
-    path: '{{ consul_template_install_dir }}'
-  changed_when: False
-  register: consul_template_binary
-- when: not consul_template_binary.stat.exists
-  block:
-    - name: downloading {{ consul_template_zip_url }}
-      become: '{{ consul_template_privilege_escalate }}'
-      become_user: root
-      get_url:
-        url: '{{ consul_template_zip_url }}'
-        dest: '{{ consul_template_tmp_zip }}'
-        mode: 0644
-
-    - name: mkdir {{ consul_template_install_dir }}
-      become: '{{ consul_template_privilege_escalate }}'
-      become_user: root
-      file:
-        path: '{{ consul_template_install_dir }}'
-        state: directory
-        mode: 0755
-
-    - name: unarchive {{ consul_template_tmp_zip }}
-      become: '{{ consul_template_privilege_escalate }}'
-      become_user: root
-      unarchive:
-        remote_src: true
-        src: '{{ consul_template_tmp_zip }}'
-        dest: '{{ consul_template_install_dir }}'
-        creates: '{{ consul_template_install_dir }}/consul-template'
-  always:
-    - name: rm {{ consul_template_tmp_zip }}
-      become: '{{ consul_template_privilege_escalate }}'
-      become_user: root
-      file:
-        path: '{{ consul_template_tmp_zip }}'
-        state: absent
-- name: linking {{ consul_template_link }} to {{ consul_template_exe }}
-  become: '{{ consul_template_privilege_escalate }}'
-  become_user: root
-  file:
-    src: '{{ consul_template_exe }}'
-    dest: '{{ consul_template_link }}'
-    state: link
+- name: installing consul-template binaries
+  include_role:
+    name: andrewrothstein.hashi
+  vars:
+    hashi_apps:
+      - name: '{{ consul_template_app.name | default("consul-template") }}'
+        ver: '{{ consul_template_app.ver | default(consul_template_ver) }}'
+        meta: '{{ consul_template_app.meta | default("") }}'
