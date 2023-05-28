@@ -17,8 +17,8 @@ galaxy_info:
     - all
   - name: Debian
     versions:
+    - bookworm
     - bullseye
-    - buster
   - name: EL
     versions:
     - 8
@@ -29,6 +29,5 @@ galaxy_info:
     - 37
   - name: Ubuntu
     versions:
-    - bionic
     - focal
     - jammy
