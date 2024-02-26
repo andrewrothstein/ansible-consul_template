@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.consul_template
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/bin/consul-template --version
+    - name: Executing 'consul-template --version'
+      ansible.builtin.command: /usr/local/bin/consul-template --version
+      changed_when: false
       register: consul_template_test_output
-    - name: consul-template --version
-      debug:
+    - name: Output of 'consul-template --version'
+      ansible.builtin.debug:
         msg: '{{ consul_template_test_output.stdout }}'
